@@ -1,0 +1,1 @@
+Reproduction example of a bug with babel-plugin-transform-react-remove-prop-types

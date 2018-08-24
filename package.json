@@ -1,0 +1,34 @@
+{
+  "name": "prop-type-removal-bug-reproduction",
+  "version": "0.0.0",
+  "description": "Reproduction example of a bug with babel-plugin-transform-react-remove-prop-types",
+  "license": "MIT",
+  "keywords": [],
+  "main": "dist/index.js",
+  "babel": {
+    "presets": [
+      "react"
+    ],
+    "plugins": [
+      [
+        "transform-react-remove-prop-types",
+        {
+          "mode": "wrap"
+        }
+      ]
+    ]
+  },
+  "dependencies": {
+    "prop-types": "^15.6.2",
+    "react": "^16.4.2"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.16.0",
+    "babel-core": "^6.17.0",
+    "babel-plugin-transform-react-remove-prop-types": "0.4.15",
+    "babel-preset-react": "^6.7.0"
+  },
+  "scripts": {
+    "build": "npx babel src --out-dir dist"
+  }
+}
