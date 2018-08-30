@@ -3,6 +3,7 @@ const path = require('path');
 const config = {
   name: 'prop-type-removal-bug-reproduction',
   target: 'web',
+  mode: 'development',
   output: {
     path: path.join(__dirname, 'dist/'),
     filename: `index.js`
