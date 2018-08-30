@@ -7,15 +7,13 @@
   "main": "dist/index.js",
   "babel": {
     "presets": [
-      "react"
+      "react",
+      "stage-0"
     ],
     "plugins": [
-      [
-        "transform-react-remove-prop-types",
-        {
-          "mode": "wrap"
-        }
-      ]
+      ["transform-react-remove-prop-types", {
+        "mode": "wrap"
+      }]
     ]
   },
   "dependencies": {
@@ -23,12 +21,16 @@
     "react": "^16.4.2"
   },
   "devDependencies": {
-    "babel-cli": "^6.16.0",
-    "babel-core": "^6.17.0",
+    "babel-core": "6.26.3",
+    "babel-loader": "7.1.5",
     "babel-plugin-transform-react-remove-prop-types": "0.4.15",
-    "babel-preset-react": "^6.7.0"
+    "babel-preset-es2015": "6.24.1",
+    "babel-preset-react": "6.24.1",
+    "babel-preset-stage-0": "6.24.1",
+    "webpack": "2.7.0"
   },
   "scripts": {
-    "build": "npx babel src --out-dir dist"
+    "build": "npx webpack",
+    "error": "npx webpack && node dist/index.js"
   }
 }

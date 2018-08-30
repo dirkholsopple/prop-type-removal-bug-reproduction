@@ -1,15 +1,11 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import wrapComponent from './component';
 
-const generateType = (x) => {
-  return PropTypes.oneOf([x-1, x, x+1]);
-};
-
-export default class Component extends React.Component {
-  render() {
+try {
+  wrapComponent(function () {
     return <div>Hello world</div>;
-  }
+  });
+  console.log("success");
+} catch (ex) {
+  console.log("error", ex);
 }
-Component.propTypes = {
-  prop: generateType(1)
-};
